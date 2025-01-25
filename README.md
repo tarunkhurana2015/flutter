@@ -13,3 +13,11 @@ the nesting of the build methods.
 `
 ![image](https://github.com/user-attachments/assets/ccade6ee-2120-4831-948b-323dd813b11c)
 
+## Performance 
+
+The best performance practices in the preceding list are also the reason why it’s
+better to decouple your widgets into other custom widgets rather than extract
+them into helper methods such as Widget buildMyWidget(). The widgets ex‐
+tracted into methods still access the same context or call setState, which causes
+the whole encapsulating widget to rebuild, so it’s generally recommended to pre‐
+fer widget classes rather than methods.
